@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'JCSWeatherKit_Example' do
+  pod 'JCSWeatherKit', :path => '../'
+
+  target 'JCSWeatherKit_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
