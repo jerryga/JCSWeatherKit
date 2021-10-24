@@ -1,0 +1,6 @@
+framework module Pods_JCSWeatherKit_Tests {
+  umbrella header "Pods-JCSWeatherKit_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

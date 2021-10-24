@@ -1,0 +1,6 @@
+framework module JCSWeatherKit {
+  umbrella header "JCSWeatherKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

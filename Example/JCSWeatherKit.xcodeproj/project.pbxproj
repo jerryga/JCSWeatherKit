@@ -40,7 +40,7 @@
 		0157C1AB03259775884EF886 /* Pods-JCSWeatherKit_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JCSWeatherKit_Example.release.xcconfig"; path = "Target Support Files/Pods-JCSWeatherKit_Example/Pods-JCSWeatherKit_Example.release.xcconfig"; sourceTree = "<group>"; };
 		09D59C34C87BBA36D22A0E1A /* Pods_JCSWeatherKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JCSWeatherKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		202A9C8FB1B284DD62E408E0 /* Pods_JCSWeatherKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JCSWeatherKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		45DEC48A539FD6ADB3B5DE46 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		45DEC48A539FD6ADB3B5DE46 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		6003F58A195388D20070C39A /* JCSWeatherKit_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JCSWeatherKit_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -60,10 +60,10 @@
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
-		693EBECEBDF610A4DCA48A25 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		693EBECEBDF610A4DCA48A25 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		899395659AE35B951DF40453 /* JCSWeatherKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = JCSWeatherKit.podspec; path = ../JCSWeatherKit.podspec; sourceTree = "<group>"; };
+		899395659AE35B951DF40453 /* JCSWeatherKit.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = JCSWeatherKit.podspec; path = ../JCSWeatherKit.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		C64FFB3A3AB47A9D2EE695AE /* Pods-JCSWeatherKit_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JCSWeatherKit_Tests.debug.xcconfig"; path = "Target Support Files/Pods-JCSWeatherKit_Tests/Pods-JCSWeatherKit_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		D5C2226A2CDDEECB263E6618 /* Pods-JCSWeatherKit_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JCSWeatherKit_Tests.release.xcconfig"; path = "Target Support Files/Pods-JCSWeatherKit_Tests/Pods-JCSWeatherKit_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		FC71367F6DB5888DE5F52534 /* Pods-JCSWeatherKit_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JCSWeatherKit_Example.debug.xcconfig"; path = "Target Support Files/Pods-JCSWeatherKit_Example/Pods-JCSWeatherKit_Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -103,7 +103,6 @@
 				C64FFB3A3AB47A9D2EE695AE /* Pods-JCSWeatherKit_Tests.debug.xcconfig */,
 				D5C2226A2CDDEECB263E6618 /* Pods-JCSWeatherKit_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -258,6 +257,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);

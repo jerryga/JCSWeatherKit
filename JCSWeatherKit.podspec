@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'JCSWeatherKit'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of JCSWeatherKit.'
+  s.summary          = 'Get current weather from openWeather APIs.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -26,17 +26,19 @@ TODO: Add long description of the pod here.
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'jerryga' => 'staticga@gmail.com' }
   s.source           = { :git => 'https://github.com/jerryga/JCSWeatherKit.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.social_media_url = 'https://twitter.com/CaSolitude'
 
-  s.ios.deployment_target = '9.0'
+  s.ios.deployment_target = '11.0'
+  s.source_files = 'JCSWeatherKit/Classes/Src/*.{h,m}', 'JCSWeatherKit/Classes/Private/*.{h,m}'
+  s.private_header_files = 'JCSWeatherKit/Classes/Private/*.h'
 
-  s.source_files = 'JCSWeatherKit/Classes/**/*'
+#  s.source_files = 'JCSWeatherKit/Classes/**/*'
   
   # s.resource_bundles = {
   #   'JCSWeatherKit' => ['JCSWeatherKit/Assets/*.png']
   # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
+#   s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
 end

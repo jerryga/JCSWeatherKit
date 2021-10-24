@@ -1,0 +1,16 @@
+PODS:
+  - JCSWeatherKit (0.1.0)
+
+DEPENDENCIES:
+  - JCSWeatherKit (from `../`)
+
+EXTERNAL SOURCES:
+  JCSWeatherKit:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  JCSWeatherKit: 3731bf2d3d759183b08c99919e4d20ec46c2ff5b
+
+PODFILE CHECKSUM: 21ba82c26d30dd7da84b64e621b922bb94d43b0d
+
+COCOAPODS: 1.11.2
