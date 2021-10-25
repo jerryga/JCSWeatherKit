@@ -2,7 +2,7 @@
 //  JCSWeatherRequestInfo+Private.m
 //  JCSWeatherKit
 //
-//  Created by YangCheng on 2021/10/21.
+//  Created by jerryga on 2021/10/21.
 //
 
 #import "JCSWeatherRequestInfo+Private.h"

@@ -2,7 +2,7 @@
 //  JCSWeatherSourceProtocol.h
 //  JCSWeatherKit
 //
-//  Created by YangCheng on 2021/10/26.
+//  Created by jerryga on 2021/10/26.
 //
 
 #import <Foundation/Foundation.h>
