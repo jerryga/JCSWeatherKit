@@ -6,12 +6,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "JCSWeatherSourceProtocol.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface JCSWeatherSource : NSObject
+@interface JCSWeatherSource : NSObject<JCSWeatherSourceProtocol>
 
-@property (nonatomic, strong, readonly) NSURL *baseURL;
 @property (nonatomic, copy, readonly) NSString *appid;
 
 - (instancetype)init NS_UNAVAILABLE;

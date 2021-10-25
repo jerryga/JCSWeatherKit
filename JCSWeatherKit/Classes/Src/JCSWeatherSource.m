@@ -9,12 +9,13 @@
 
 @interface JCSWeatherSource ()
 
-@property (nonatomic, strong, readwrite) NSURL *baseURL;
 @property (nonatomic, copy, readwrite) NSString *appid;
 
 @end
 
 @implementation JCSWeatherSource
+
+@synthesize baseURL;
 
 - (instancetype)initWithBaseURL:(NSURL *)url appid:(NSString *)appid {
     if (self = [super init]) {

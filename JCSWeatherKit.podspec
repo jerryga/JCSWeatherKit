@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'JCSWeatherKit'
-  s.version          = '0.2.0'
+  s.version          = '0.3.0'
   s.summary          = 'Get current weather from openWeather APIs.'
 
 # This description is used to generate tags and improve search results.
