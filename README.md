@@ -12,6 +12,8 @@ It can fetch weather data from OpenWeatherMap. More data sources will be support
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+![Example png](https://gist.githubusercontent.com/jerryga/fe17396aa33929a88f5e267d75806c69/raw/ca8f5053df4078284f6f7a104e0273a8fe7344cf/weather.png)
+
 ## Requirements
 iOS 11.0+
 ## Installation
