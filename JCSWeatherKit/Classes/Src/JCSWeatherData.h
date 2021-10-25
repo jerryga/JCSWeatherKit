@@ -28,7 +28,9 @@ typedef struct {
 @interface JCSWeatherData : NSObject
 
 @property (nonatomic, strong) NSString *summary;
-@property (nonatomic, strong) NSString *icon;
+@property (nonatomic, strong) NSString *iconName;
+@property (nonatomic, strong, readonly) NSURL *iconURL;
+
 @property (nonatomic, strong) NSString *detail;
 
 @property (nonatomic, assign) JCSTemperature temperature;

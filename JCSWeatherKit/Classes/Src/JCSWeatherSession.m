@@ -18,7 +18,6 @@
 
 @interface JCSWeatherSession ()
 
-@property (nonatomic, strong) JCSWeatherSource *weatherSrc;
 @property (nonatomic, strong) JCSWeatherRequestInfo *requestInfo;
 @property (nonatomic, strong) JCSLocationService *locationService;
 @property (nonatomic, strong) JCSWeatherData* currentWeather;
@@ -40,6 +39,10 @@
 
     }
     return self;
+}
+
+- (instancetype)init {
+    return [self initWithSource:nil];
 }
 
 #pragma mark - Public
@@ -131,20 +134,6 @@
         }] resume];
 }
 
-#pragma mark - Lifecycle
-
-- (void)applicationDidEnterBackground:(UIApplication *)application
-{
-    [self.locationService stopLocationService];
-}
-
-- (void)applicationDidBecomeActive:(UIApplication *)application
-{
-    [self.locationService startLocationService];
-    if ([self shouldRefreshWeather]) {
-        [self sendRequest:self.requestInfo completion:self.weatherCompletion];
-    }
-}
 
 
 @end

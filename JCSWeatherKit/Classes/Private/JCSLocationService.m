@@ -22,7 +22,9 @@
     return [[[self class] alloc] init];
 }
 
-
+- (void)dealloc {
+    
+}
 #pragma mark - Public
 
 - (void)startLocationService {
@@ -95,10 +97,13 @@
 {
     if (kCLAuthorizationStatusDenied == status) {
         [self getLocationFailed];
+    }else if (kCLAuthorizationStatusAuthorizedWhenInUse == status || kCLAuthorizationStatusAuthorizedAlways == status) {
+        [self.locationManager startUpdatingLocation];
     }
 }
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations {
+    [manager stopUpdatingLocation];
     CLLocation *userLocation = locations[0];
     if (self.lastLocation) {
         if ([userLocation distanceFromLocation:self.lastLocation] > 3000) {

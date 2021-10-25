@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'JCSWeatherKit'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = 'Get current weather from openWeather APIs.'
 
 # This description is used to generate tags and improve search results.
@@ -29,9 +29,22 @@ TODO: Add long description of the pod here.
   s.social_media_url = 'https://twitter.com/CaSolitude'
 
   s.ios.deployment_target = '11.0'
-  s.source_files = 'JCSWeatherKit/Classes/Src/*.{h,m}', 'JCSWeatherKit/Classes/Private/*.{h,m}'
-  s.private_header_files = 'JCSWeatherKit/Classes/Private/*.h'
+#  s.source_files = 'JCSWeatherKit/Classes/Src/*.{h,m}', 'JCSWeatherKit/Classes/Private/*.{h,m}'
+#  s.private_header_files = 'JCSWeatherKit/Classes/Private/*.h'
+#  s.public_header_files = 'JCSWeatherKit/Classes/include/*.h'
+  
+  s.subspec 'Src' do |src|
+    src.source_files = 'JCSWeatherKit/Classes/Src/*.{h,m}','JCSWeatherKit/Classes/Private/*.{h,m}'
+    src.private_header_files = 'JCSWeatherKit/Classes/Private/*.h'
+    
+  end
 
+  s.subspec 'Private' do |pri|
+    pri.source_files = 'JCSWeatherKit/Classes/Private/*.{h,m}'
+    pri.private_header_files = 'JCSWeatherKit/Classes/Private/*.h'
+    pri.dependency 'JCSWeatherKit/Src'
+
+  end
 #  s.source_files = 'JCSWeatherKit/Classes/**/*'
   
   # s.resource_bundles = {

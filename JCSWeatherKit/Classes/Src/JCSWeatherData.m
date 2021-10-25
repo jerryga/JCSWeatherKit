@@ -25,7 +25,7 @@ float Kelvin_to_Celsius(float K)
         if ([item isKindOfClass:[NSDictionary class]]) {
             weatherData.summary = item[@"main"];
             weatherData.detail = item[@"description"];
-            weatherData.icon = item[@"icon"];
+            weatherData.iconName = item[@"icon"];
         }
     }
     
@@ -76,4 +76,11 @@ float Kelvin_to_Celsius(float K)
     return weatherData;
 }
 
+- (NSURL *)iconURL {
+    NSURL *url = nil;
+    if (self.iconName) {
+        url = [NSURL URLWithString:[NSString stringWithFormat:@"http://openweathermap.org/img/wn/%@@2x.png", self.iconName]];
+    }
+    return url;
+}
 @end

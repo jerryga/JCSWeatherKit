@@ -16,8 +16,7 @@ typedef void (^JCSWeatherSessionCompletion)(JCSWeatherData * _Nullable data, NSE
 
 @interface JCSWeatherSession : NSObject
 
-- (instancetype)init NS_UNAVAILABLE;
-+ (instancetype)new NS_UNAVAILABLE;
+@property (nonatomic, strong) JCSWeatherSource *weatherSrc;
 
 - (instancetype)initWithSource:(nonnull JCSWeatherSource *)source NS_DESIGNATED_INITIALIZER;
 
