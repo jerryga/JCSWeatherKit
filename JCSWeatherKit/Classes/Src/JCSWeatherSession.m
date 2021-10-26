@@ -41,10 +41,6 @@
     return self;
 }
 
-- (instancetype)init {
-    return [self initWithSource:nil];
-}
-
 #pragma mark - Public
 
 - (void)asyncGetWeather:(JCSWeatherRequestInfo *)info completion:(JCSWeatherSessionCompletion)completion {

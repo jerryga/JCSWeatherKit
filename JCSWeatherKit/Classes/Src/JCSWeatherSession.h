@@ -35,6 +35,9 @@ typedef void (^JCSWeatherSessionCompletion)(JCSWeatherData *_Nullable data, NSEr
  */
 - (instancetype)initWithSource:(id <JCSWeatherSourceProtocol>)source NS_DESIGNATED_INITIALIZER;
 
+- (instancetype)init NS_UNAVAILABLE;
+- (instancetype)new NS_UNAVAILABLE;
+
 /**
  async get weather from online..
  
