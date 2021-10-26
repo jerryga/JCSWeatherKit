@@ -82,7 +82,7 @@ typedef NS_ENUM(NSUInteger, JCSDemoWeatherDisplayMode){
 
 - (JCSWeatherSession *)session {
     if (!_session) {
-        JCSWeatherSource *src = [[JCSWeatherSource alloc] initWithBaseURL:[NSURL URLWithString:@"https://api.openweathermap.org/data/2.5/weather"] appid:@"edfe4ace41a2a8b1b9c7b15885662313"];
+        JCSOpenWeatherSource *src = [[JCSOpenWeatherSource alloc] initWithBaseURL:[NSURL URLWithString:@"https://api.openweathermap.org/data/2.5/weather"] appid:@"edfe4ace41a2a8b1b9c7b15885662313"];
         _session = [[JCSWeatherSession alloc] initWithSource:src];
     }
     return _session;

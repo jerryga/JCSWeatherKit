@@ -14,7 +14,10 @@ NS_ASSUME_NONNULL_BEGIN
 @required
 
 @property (nonatomic, strong) NSURL *baseURL;
- 
+@property (nonatomic, copy) NSString *appid;
+
+- (BOOL)isValid;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -6,7 +6,7 @@
 //
 
 #import "JCSWeatherRequestInfo+Private.h"
-#import "JCSWeatherSource.h"
+#import "JCSWeatherSourceProtocol.h"
 
 @implementation JCSWeatherRequestInfo (Private)
 
@@ -44,13 +44,14 @@
     return [mDic copy];
 }
 
-- (NSURL *)urlWithSrc:(JCSWeatherSource *)src {
-    //http://api.openweathermap.org/data/2.5/weather?
-    //&units=metric ;Celsius; no need for K
+- (NSURL *)urlWithSrc:(id<JCSWeatherSourceProtocol>)src {
+
     NSURLComponents *components = [NSURLComponents componentsWithString:src.baseURL.absoluteString];
   
     NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithDictionary:[self toDic]];
-    [dict setObject:src.appid forKey:@"appid"];
+    if (src.appid) {
+        [dict setObject:src.appid forKey:@"appid"];
+    }
     components.queryItems = [self queryItemsWithParameters:dict];
     
     return components.URL;

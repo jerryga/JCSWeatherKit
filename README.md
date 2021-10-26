@@ -35,7 +35,7 @@ There are a lot of unit tests in the file "JCSWeatherKitTests". You can refer to
 ```objc
 #import <JCSWeatherKit/JCSWeatherKit.h>
 
-    JCSWeatherSource *src = [[JCSWeatherSource alloc] initWithBaseURL:[NSURL URLWithString:@"http://api.openweathermap.org/data/2.5/weather"] appid:@"YOUR API KEY"];
+    JCSOpenWeatherSource *src = [[JCSOpenWeatherSource alloc] initWithBaseURL:[NSURL URLWithString:@"http://api.openweathermap.org/data/2.5/weather"] appid:@"YOUR API KEY"];
     JCSWeatherSession *session = [[JCSWeatherSession alloc] initWithSource:src];
 ```
 ###### Getting weather by City ID
@@ -121,7 +121,7 @@ JCSWeatherKit is implemented as a layered architecture.
     |        +----------------------------------------------------+
     |        |                  JCSWeatherSession                           |
     |    +--------------------------------------------------------+
-    |    | JCSWeatherSource | JCSWeatherRequestInfo | JCSLocationService | 
+    |    | JCSOpenWeatherSource | JCSWeatherRequestInfo | JCSLocationService | 
     +----+-----------------+-----------------+--------------------+
     |       JCSWeatherData        |     JCSWeatherError    |
     +----------------------+-----------------+
@@ -134,11 +134,11 @@ Provides asynchronous request of getting weather from OpenWeatherAPI. The input 
 Primary entry points: JCSWeatherSession.h,
 
 
-### JCSWeatherSource
+### JCSOpenWeatherSource
 
 Provides configuration data, including APPID and base URL where JCSWeatherSession can get weather data from.
 
-Primary entry point: JCSWeatherSource.h
+Primary entry point: JCSOpenWeatherSource.h
 
 
 ### JCSWeatherRequestInfo

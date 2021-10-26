@@ -7,22 +7,24 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
+
 NS_ASSUME_NONNULL_BEGIN
 
-@class JCSWeatherSource, JCSWeatherData, JCSWeatherRequestInfo;
+@class JCSWeatherRequestInfo, JCSWeatherData;
+@protocol JCSWeatherSourceProtocol;
 
 /** Callback for Weather Session.
  *
  * @param data The data fetched by session.
  * @param error Non-nil if an error occurred..(such as invalid source).
  */
-typedef void (^JCSWeatherSessionCompletion)(JCSWeatherData * _Nullable data, NSError * _Nullable error);
+typedef void (^JCSWeatherSessionCompletion)(JCSWeatherData *_Nullable data, NSError * _Nullable error);
 
 
 @interface JCSWeatherSession : NSObject
 
 /// The weather source used by the weather session.
-@property (nonatomic, strong) JCSWeatherSource *weatherSrc;
+@property (nonatomic, strong) id <JCSWeatherSourceProtocol> weatherSrc;
 
 /**
  Initializes a weather session using the given source.
@@ -31,7 +33,7 @@ typedef void (^JCSWeatherSessionCompletion)(JCSWeatherData * _Nullable data, NSE
             source to use, including URL, APIKey....
  @return    A newly initialized weather session.
  */
-- (instancetype)initWithSource:(nonnull JCSWeatherSource *)source NS_DESIGNATED_INITIALIZER;
+- (instancetype)initWithSource:(id <JCSWeatherSourceProtocol>)source NS_DESIGNATED_INITIALIZER;
 
 /**
  async get weather from online..

@@ -9,10 +9,12 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class JCSWeatherSource;
+@protocol  JCSWeatherSourceProtocol;
 
 @interface JCSWeatherRequestInfo (Private)
-- (NSURL *)urlWithSrc:(JCSWeatherSource *)src;
+
+- (NSURL *)urlWithSrc:(id<JCSWeatherSourceProtocol>)src ;
+
 @end
 
 NS_ASSUME_NONNULL_END

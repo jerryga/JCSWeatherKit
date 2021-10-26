@@ -17,11 +17,11 @@
 		6E49B2152725656700E389FA /* ReplaceMe.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E49B1FD2725656700E389FA /* ReplaceMe.m */; };
 		6E49B2162725656700E389FA /* JCSWeatherData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E49B1FF2725656700E389FA /* JCSWeatherData.m */; };
 		6E49B2172725656700E389FA /* JCSWeatherError.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E49B2002725656700E389FA /* JCSWeatherError.m */; };
-		6E49B2182725656700E389FA /* JCSWeatherSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E49B2012725656700E389FA /* JCSWeatherSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6E49B2182725656700E389FA /* JCSOpenWeatherSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E49B2012725656700E389FA /* JCSOpenWeatherSource.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6E49B2192725656700E389FA /* JCSWeatherSession.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E49B2022725656700E389FA /* JCSWeatherSession.m */; };
 		6E49B21A2725656700E389FA /* JCSWeatherRequestInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E49B2032725656700E389FA /* JCSWeatherRequestInfo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6E49B21B2725656700E389FA /* JCSWeatherData.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E49B2042725656700E389FA /* JCSWeatherData.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6E49B21C2725656700E389FA /* JCSWeatherSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E49B2052725656700E389FA /* JCSWeatherSource.m */; };
+		6E49B21C2725656700E389FA /* JCSOpenWeatherSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E49B2052725656700E389FA /* JCSOpenWeatherSource.m */; };
 		6E49B21D2725656700E389FA /* JCSWeatherKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E49B2062725656700E389FA /* JCSWeatherKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6E49B21E2725656700E389FA /* JCSWeatherError.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E49B2072725656700E389FA /* JCSWeatherError.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6E49B21F2725656700E389FA /* JCSWeatherRequestInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E49B2082725656700E389FA /* JCSWeatherRequestInfo.m */; };
@@ -73,11 +73,11 @@
 		6E49B1FD2725656700E389FA /* ReplaceMe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReplaceMe.m; sourceTree = "<group>"; };
 		6E49B1FF2725656700E389FA /* JCSWeatherData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSWeatherData.m; sourceTree = "<group>"; };
 		6E49B2002725656700E389FA /* JCSWeatherError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSWeatherError.m; sourceTree = "<group>"; };
-		6E49B2012725656700E389FA /* JCSWeatherSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSWeatherSource.h; sourceTree = "<group>"; };
+		6E49B2012725656700E389FA /* JCSOpenWeatherSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSOpenWeatherSource.h; sourceTree = "<group>"; };
 		6E49B2022725656700E389FA /* JCSWeatherSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSWeatherSession.m; sourceTree = "<group>"; };
 		6E49B2032725656700E389FA /* JCSWeatherRequestInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSWeatherRequestInfo.h; sourceTree = "<group>"; };
 		6E49B2042725656700E389FA /* JCSWeatherData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSWeatherData.h; sourceTree = "<group>"; };
-		6E49B2052725656700E389FA /* JCSWeatherSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSWeatherSource.m; sourceTree = "<group>"; };
+		6E49B2052725656700E389FA /* JCSOpenWeatherSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSOpenWeatherSource.m; sourceTree = "<group>"; };
 		6E49B2062725656700E389FA /* JCSWeatherKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSWeatherKit.h; sourceTree = "<group>"; };
 		6E49B2072725656700E389FA /* JCSWeatherError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSWeatherError.h; sourceTree = "<group>"; };
 		6E49B2082725656700E389FA /* JCSWeatherRequestInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSWeatherRequestInfo.m; sourceTree = "<group>"; };
@@ -217,8 +217,8 @@
 				6E49B2082725656700E389FA /* JCSWeatherRequestInfo.m */,
 				6E49B2092725656700E389FA /* JCSWeatherSession.h */,
 				6E49B2022725656700E389FA /* JCSWeatherSession.m */,
-				6E49B2012725656700E389FA /* JCSWeatherSource.h */,
-				6E49B2052725656700E389FA /* JCSWeatherSource.m */,
+				6E49B2012725656700E389FA /* JCSOpenWeatherSource.h */,
+				6E49B2052725656700E389FA /* JCSOpenWeatherSource.m */,
 				6EA3FE69272714F900E33729 /* JCSWeatherSourceProtocol.h */,
 			);
 			path = Src;
@@ -324,7 +324,7 @@
 				6E49B2202725656700E389FA /* JCSWeatherSession.h in Headers */,
 				6E49B21B2725656700E389FA /* JCSWeatherData.h in Headers */,
 				6E49B21D2725656700E389FA /* JCSWeatherKit.h in Headers */,
-				6E49B2182725656700E389FA /* JCSWeatherSource.h in Headers */,
+				6E49B2182725656700E389FA /* JCSOpenWeatherSource.h in Headers */,
 				6E49B21A2725656700E389FA /* JCSWeatherRequestInfo.h in Headers */,
 				6EA3FE6A272714F900E33729 /* JCSWeatherSourceProtocol.h in Headers */,
 				6E49B21E2725656700E389FA /* JCSWeatherError.h in Headers */,
@@ -458,7 +458,7 @@
 				6E49B2172725656700E389FA /* JCSWeatherError.m in Sources */,
 				6E49B2162725656700E389FA /* JCSWeatherData.m in Sources */,
 				AF7C4FF2B5C5210740DBD78B9000C856 /* JCSWeatherKit-dummy.m in Sources */,
-				6E49B21C2725656700E389FA /* JCSWeatherSource.m in Sources */,
+				6E49B21C2725656700E389FA /* JCSOpenWeatherSource.m in Sources */,
 				6E49B2112725656700E389FA /* JCSWeatherRequestInfo+Private.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

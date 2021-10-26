@@ -1,5 +1,5 @@
 //
-//  JCSWeatherSource.h
+//  JCSOpenWeatherSource.h
 //  JCSWeatherKit
 //
 //  Created by jerryga on 2021/10/21.
@@ -10,15 +10,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface JCSWeatherSource : NSObject<JCSWeatherSourceProtocol>
-
-@property (nonatomic, copy, readonly) NSString *appid;
+@interface JCSOpenWeatherSource : NSObject<JCSWeatherSourceProtocol>
 
 - (instancetype)init NS_UNAVAILABLE;
 + (instancetype)new NS_UNAVAILABLE;
 - (instancetype)initWithBaseURL:(NSURL *)url appid:(NSString *)appid NS_DESIGNATED_INITIALIZER;
-
-- (BOOL)isValid;
 
 @end
 

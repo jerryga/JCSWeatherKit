@@ -6,13 +6,13 @@
 //
 
 #import "JCSWeatherSession.h"
-#import "JCSWeatherSource.h"
 #import "JCSWeatherRequestInfo.h"
 #import "JCSWeatherRequestInfo+Private.h"
-#import "JCSWeatherData.h"
 #import "JCSWeatherError.h"
 #import "JCSLocationService.h"
 #import <UIKit/UIKit.h>
+#import "JCSWeatherSourceProtocol.h"
+#import "JCSWeatherData.h"
 
 #define K_DAY_HOUR 3600
 
@@ -20,7 +20,7 @@
 
 @property (nonatomic, strong) JCSWeatherRequestInfo *requestInfo;
 @property (nonatomic, strong) JCSLocationService *locationService;
-@property (nonatomic, strong) JCSWeatherData* currentWeather;
+@property (nonatomic, strong) JCSWeatherData *currentWeather;
 @property (nonatomic, copy) JCSWeatherSessionCompletion weatherCompletion;
 
 @property (nonatomic, strong) dispatch_queue_t dataQueue;
@@ -29,7 +29,7 @@
 
 @implementation JCSWeatherSession
 
-- (instancetype)initWithSource:(JCSWeatherSource *)source {
+- (instancetype)initWithSource:(id <JCSWeatherSourceProtocol>)source {
     if (self = [super init]) {
         
         NSString *bundleIdentifier = [[NSBundle mainBundle] bundleIdentifier];

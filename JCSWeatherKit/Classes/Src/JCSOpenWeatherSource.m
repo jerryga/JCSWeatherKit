@@ -1,21 +1,21 @@
 //
-//  JCSWeatherSource.m
+//  JCSOpenWeatherSource.m
 //  JCSWeatherKit
 //
 //  Created by jerryga on 2021/10/21.
 //
 
-#import "JCSWeatherSource.h"
+#import "JCSOpenWeatherSource.h"
+#import "JCSWeatherSourceProtocol.h"
 
-@interface JCSWeatherSource ()
-
-@property (nonatomic, copy, readwrite) NSString *appid;
+@interface JCSOpenWeatherSource ()
 
 @end
 
-@implementation JCSWeatherSource
+@implementation JCSOpenWeatherSource
 
 @synthesize baseURL;
+@synthesize appid;
 
 - (instancetype)initWithBaseURL:(NSURL *)url appid:(NSString *)appid {
     if (self = [super init]) {
