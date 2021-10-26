@@ -90,7 +90,7 @@
 - (void)getWeather:(JCSWeatherRequestInfo *)info {
     XCTestExpectation* expectation = [self expectationWithDescription:@"request weather failed..."];
 
-    JCSWeatherSource *src = [[JCSWeatherSource alloc] initWithBaseURL:[NSURL URLWithString:@"http://api.openweathermap.org/data/2.5/weather"] appid:@"edfe4ace41a2a8b1b9c7b15885662313"];
+    JCSOpenWeatherSource *src = [[JCSOpenWeatherSource alloc] initWithBaseURL:[NSURL URLWithString:@"http://api.openweathermap.org/data/2.5/weather"] appid:@"edfe4ace41a2a8b1b9c7b15885662313"];
     JCSWeatherSession *session = [[JCSWeatherSession alloc] initWithSource:src];
     
     [session asyncGetWeather:info completion:^(JCSWeatherData * _Nullable data, NSError * _Nullable error) {
