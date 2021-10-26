@@ -59,16 +59,12 @@ typedef NS_ENUM(NSUInteger, JCSDemoWeatherDisplayMode){
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     self.displayMode = (JCSDemoWeatherDisplayMode)[[NSUserDefaults standardUserDefaults] integerForKey:K_Demo_WeatherDisplayMode];
-    [self setupWeatherRequestInfo:nil];
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    [super viewWillAppear:animated];
+    [self startGetWeather];
+    
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(applicationDidBecomeActive:) name:UIApplicationDidBecomeActiveNotification object:nil];
 }
 
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
+- (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self name:UIApplicationDidBecomeActiveNotification object:nil];
 }
 
